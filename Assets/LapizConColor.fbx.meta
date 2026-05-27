@@ -1,14 +1,21 @@
 fileFormatVersion: 2
-guid: 6be041a8fc983f04aa35b4e6cdd66277
+guid: c1e6e2ba74f19b848b3992058eaedd42
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: No Name
+    2100000: Material.001
+    2100002: Abajo
+    2100004: Abajaso
+    2100006: Mango
+    2100008: Otroabajo
+    2100010: dorado
+    2100012: borrador
     2300000: //RootNode
     3300000: //RootNode
     4300000: Circle
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
