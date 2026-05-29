@@ -1,0 +1,19 @@
+﻿using UnityEngine;
+using TMPro;
+
+public class UIManager : MonoBehaviour
+{
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI timerText;
+
+    public void UpdateScore(int score)
+    {
+        scoreText.text = "Score: " + score;
+    }
+public void UpdateTimer(float timer)
+{
+    int segundos = Mathf.FloorToInt(timer);
+    int milisegundos = Mathf.FloorToInt((timer - segundos) * 100);
+    timerText.text = string.Format("{0:D2}:{1:D2}", segundos, milisegundos);
+}
+}
