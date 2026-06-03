@@ -3,6 +3,7 @@
 public class InteractiveArea : MonoBehaviour
 {
     int score = 0;
+    public int scoreMaximo = 1;
     UIManager uiManager;
 
     void Awake()
@@ -16,9 +17,15 @@ public class InteractiveArea : MonoBehaviour
         {
             score++;
             Debug.Log("Lápiz recolectado! Score: " + score);
-
             uiManager.UpdateScore(score);
             Destroy(other.gameObject);
+
+            if (score >= scoreMaximo)
+            {
+                uiManager.MostrarPantallaWin();
+                FindObjectOfType<GameManager>().juegoActivo = false;
+                Time.timeScale = 0;
+            }
         }
     }
 }
