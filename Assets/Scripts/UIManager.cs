@@ -7,10 +7,15 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI timerText;
     public GameObject panelWin;
     public GameObject panelGameOver;
+    public GameObject[] lapicesIconos;
 
     public void UpdateScore(int score)
     {
         scoreText.text = "Score: " + score;
+        for (int i = 0; i < lapicesIconos.Length; i++)
+{
+    lapicesIconos[i].SetActive(i < score);
+}
     }
 
     public void UpdateTimer(float timer)
@@ -29,4 +34,5 @@ public class UIManager : MonoBehaviour
     {
         panelGameOver.SetActive(true);
     }
+    
 }
